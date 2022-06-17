@@ -57,7 +57,7 @@ int main(void)
     while(aux>0);
 
     // result
-    // clrScr();
+    clrScr();
     printf("%s","+-----------------------------------+\n");
     printf("%s","|  Troco para: ");
     printf("%0.2f", payback);

@@ -10,13 +10,24 @@ void clrScr(void){
 
 // get value
 float getValue(void){
+    float cost=0;
+    float paid=0;
     float value=0;
+
+    clrScr();
     do
     {
-        clrScr();
-        value = get_float("Qual o valor do troco? ");
+        cost = get_float("Qual o valor da compra? ");
     }
-    while(value<=0 || value>=100);
+    while(cost<=0);
+    do
+    {
+        paid = get_float("Qual o valor recebido? ");
+    }
+    while(paid<=0 || paid<=cost);
+
+    value = paid - cost;
+
     return value;
 }
 
